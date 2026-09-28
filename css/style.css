@@ -392,7 +392,7 @@ section{position:relative;padding:100px 0;}
             rgba(10, 200, 185, .12),
             transparent 60%
         ),
-        url("./images/mapa.jpg") center center / 100% auto no-repeat,
+        url("../images/mapa.jpg") center center / 100% auto no-repeat,
         var(--bg-1);
 
     border-top: 1px solid var(--line);
