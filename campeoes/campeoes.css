@@ -1,0 +1,1088 @@
+:root {
+--bg-0: #010a13;
+--bg-1: #0a1428;
+--bg-2: #0a1c30;
+--panel: #0e2036;
+--line: #1e3554;
+--gold-1: #c8aa6e;
+--gold-2: #f0e6d2;
+--gold-bright: #f0c33d;
+--gold-dark: #785a28;
+--cyan: #0ac8b9;
+--text-main: #cdd6e0;
+--text-dim: #8892a0;
+}
+
+/* ==========================================
+RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--bg-0);
+color: var(--text-main);
+font-family: 'Barlow', sans-serif;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button,
+input {
+font-family: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+.display {
+font-family: 'Cinzel', serif;
+letter-spacing: 1px;
+color: var(--gold-2);
+font-weight: 600;
+}
+
+.wrap {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 32px;
+}
+
+/* ==========================================
+NAVBAR
+========================================== */
+
+header.nav {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 100;
+background:
+    linear-gradient(
+        180deg,
+        rgba(1, 10, 19, .97) 0%,
+        rgba(1, 10, 19, .90) 70%,
+        transparent 100%
+    );
+border-bottom: 1px solid rgba(200, 170, 110, .15);
+backdrop-filter: blur(6px);
+}
+
+.nav-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 14px 32px;
+display: flex;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+font-family: 'Cinzel', serif;
+font-size: 17px;
+font-weight: 700;
+color: var(--gold-2);
+letter-spacing: 1.5px;
+margin-left: -70px;
+
+}
+
+.logo svg {
+width: 26px;
+height: 26px;
+flex-shrink: 0;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 30px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.nav-links a {
+position: relative;
+padding: 6px 0;
+font-size: 13px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--text-main);
+transition: color .25s;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--gold-bright);
+transition: width .25s;
+}
+
+.nav-links a:hover {
+color: var(--gold-2);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+width: 100%;
+}
+
+.nav-links a.active {
+color: var(--gold-2);
+}
+
+.nav-cta {
+background:linear-gradient(180deg,var(--gold-1),var(--gold-dark));
+color: #0a1428;
+font-family: 'Cinzel', serif;
+font-weight: 700;
+font-size: 12px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+padding: 10px 22px;
+border-radius: 2px;
+box-shadow: 0 0 0 1px rgba(240, 230, 210, .3) inset;
+transition:
+    transform .2s,
+    box-shadow .2s;
+}
+
+.nav-cta:hover {
+transform: translateY(-2px);
+
+box-shadow:
+    0 4px 16px rgba(240, 195, 61, .25),
+    0 0 0 1px rgba(240, 230, 210, .4) inset;
+
+}
+
+/* ==========================================
+NAVBAR — ÍCONES
+========================================== */
+
+.nav-icon,
+.nav-user,
+.nav-language,
+.nav-notification {
+width: 38px;
+height: 38px;
+border: 1px solid var(--gold-1);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--gold-2);
+transition: all .25s;
+
+}
+
+.nav-icon {
+margin-left: 18px;
+}
+
+.nav-user,
+.nav-language,
+.nav-notification {
+margin-left: 10px;
+}
+
+.nav-icon svg {
+width: 20px;
+height: 20px;
+}
+
+.nav-user svg {
+width: 22px;
+height: 22px;
+}
+
+.nav-language svg,
+.nav-notification svg {
+width: 21px;
+height: 21px;
+}
+
+.nav-icon:hover,
+.nav-user:hover,
+.nav-language:hover,
+.nav-notification:hover {
+color: var(--gold-bright);
+border-color: var(--gold-bright);
+}
+
+/* ==========================================
+MENU MOBILE
+========================================== */
+
+.nav-toggle {
+display: none;
+background: none;
+border: none;
+color: var(--gold-2);
+font-size: 22px;
+cursor: pointer;
+}
+
+/* ==========================================
+HERO DOS CAMPEÕES
+========================================== */
+
+.champions-hero {
+position: relative;
+min-height: 540px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+background:
+    linear-gradient(
+        180deg,
+        rgba(1, 10, 19, .55),
+        rgba(1, 10, 19, .92)
+    ),
+    url("../images/Kindred.jpg")
+    center 30% / cover no-repeat;
+}
+
+.champions-hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background:
+    radial-gradient(
+        circle at 50% 40%,
+        rgba(10, 200, 185, .10),
+        transparent 45%
+    );
+}
+
+.champions-hero::after {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+height: 180px;
+background:
+    linear-gradient(
+        transparent,
+        var(--bg-0)
+    );
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background:
+    linear-gradient(
+        90deg,
+        rgba(1, 10, 19, .85),
+        rgba(1, 10, 19, .30),
+        rgba(1, 10, 19, .85)
+    );
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 760px;
+padding: 120px 30px 70px;
+text-align: center;
+}
+
+.hero-content .eyebrow {
+margin-bottom: 14px;
+}
+
+.hero-content h1 {
+font-size: clamp(48px, 7vw, 82px);
+line-height: 1.05;
+text-shadow: 0 4px 30px rgba(0, 0, 0, .65);
+}
+
+.hero-content p:last-child {
+max-width: 600px;
+margin: 22px auto 0;
+color: var(--text-main);
+font-family: 'Spectral', serif;
+font-size: 17px;
+}
+
+/* ==========================================
+TEXTOS DE SEÇÃO
+========================================== */
+
+.eyebrow {
+color: var(--gold-bright);
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+}
+
+.section-head {
+max-width: 680px;
+margin-bottom: 48px;
+}
+
+.section-head--center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.section-head h2 {
+font-size: 34px;
+margin-top: 12px;
+}
+
+.section-sub {
+color: var(--text-dim);
+font-size: 15px;
+margin-top: 14px;
+
+
+}
+
+/* ==========================================
+SEÇÃO DOS CAMPEÕES
+========================================== */
+
+.champions-section {
+position: relative;
+padding: 100px 0 110px;
+background: var(--bg-0);
+
+}
+
+.champions-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 50%;
+width: 600px;
+height: 300px;
+transform: translateX(-50%);
+background:
+    radial-gradient(
+        ellipse,
+        rgba(10, 200, 185, .06),
+        transparent 70%
+    );
+pointer-events: none;
+
+}
+
+/* ==========================================
+PESQUISA
+========================================== */
+
+.champion-search {
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.search-box {
+width: min(500px, 100%);
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.search-box svg {
+position: absolute;
+left: 17px;
+width: 20px;
+height: 20px;
+color: var(--gold-1);
+pointer-events: none;
+}
+
+.search-box input {
+width: 100%;
+height: 48px;
+padding: 0 18px 0 50px;
+border: 1px solid var(--line);
+border-radius: 3px;
+outline: none;
+background: var(--panel);
+color: var(--gold-2);
+font-size: 14px;
+transition:
+    border-color .25s,
+    box-shadow .25s;
+}
+
+.search-box input::placeholder {
+color: var(--text-dim);
+}
+
+.search-box input:focus {
+border-color: var(--gold-1);
+box-shadow:
+    0 0 0 2px rgba(240, 195, 61, .08);
+
+}
+
+/* ==========================================
+FILTROS
+========================================== */
+
+.role-row {
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+margin-bottom: 48px;
+
+}
+
+.role-pill {
+display: flex;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--line);
+padding: 10px 18px;
+border-radius: 30px;
+background: transparent;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: .5px;
+text-transform: uppercase;
+color: var(--text-dim);
+transition:
+    border-color .2s,
+    color .2s,
+    background .2s,
+    transform .2s;
+}
+
+.role-pill:hover {
+border-color: var(--gold-1);
+color: var(--gold-2);
+transform: translateY(-1px);
+}
+
+.role-pill.active {
+border-color: var(--gold-bright);
+color: var(--gold-bright);
+background: rgba(240, 195, 61, .07);
+box-shadow: 0 0 15px rgba(240, 195, 61, .06);
+
+}
+
+.role-icon {
+color: var(--gold-bright);
+font-size: 13px;
+}
+
+/* ==========================================
+GRID DE CAMPEÕES
+========================================== */
+
+.champ-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+/* ==========================================
+CARD
+========================================== */
+
+.champ-card {
+position: relative;
+aspect-ratio: 3 / 4;
+border-radius: 4px;
+overflow: hidden;
+border: 1px solid var(--line);
+cursor: pointer;
+background: var(--panel);
+opacity: 1;
+transform: translateY(0);
+transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease,
+    opacity .25s ease;
+
+}
+
+.champ-card:hover {
+transform: translateY(-7px);
+border-color: var(--gold-1);
+box-shadow:
+    0 18px 35px rgba(0, 0, 0, .45),
+    0 0 20px rgba(200, 170, 110, .06);
+}
+
+.champ-card.hidden {
+display: none;
+}
+
+.champ-portrait {
+position: absolute;
+inset: 0;
+overflow: hidden;
+background:
+    radial-gradient(
+        circle at 50% 30%,
+        #16324f,
+        #07111d
+    );
+}
+
+.champ-portrait img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+transition:
+    transform .5s ease,
+    filter .4s ease;
+}
+
+.champ-card:hover .champ-portrait img {
+transform: scale(1.08);
+filter: saturate(1.08);
+}
+
+/* ==========================================
+CORES DOS CARDS
+========================================== */
+
+.champ-card:nth-child(8n + 1) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#c8443a,
+#2b0d0d
+);
+}
+
+.champ-card:nth-child(8n + 2) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#0ac8b9,
+#082e2a
+);
+}
+
+.champ-card:nth-child(8n + 3) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#c89b3c,
+#382a10
+);
+}
+
+.champ-card:nth-child(8n + 4) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#6c7ee1,
+#171d3d
+);
+}
+
+.champ-card:nth-child(8n + 5) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#8e4fc9,
+#2a123c
+);
+}
+
+.champ-card:nth-child(8n + 6) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#4fa93a,
+#142b0d
+);
+}
+.champ-card:nth-child(8n + 7) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#365e9c,
+#0c1b31
+);
+}
+.champ-card:nth-child(8n + 8) .champ-portrait {
+background:
+radial-gradient(
+circle at 50% 30%,
+#b65b35,
+#35150c
+);
+}
+
+/* ==========================================
+GRADIENTE DO NOME
+========================================== */
+
+.champ-label {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 45px 16px 16px;
+background:
+    linear-gradient(
+        0deg,
+        rgba(1, 10, 19, .98),
+        rgba(1, 10, 19, .72) 45%,
+        transparent
+    );
+}
+.champ-label b {
+display: block;
+font-size: 18px;
+color: var(--gold-2);
+font-family: 'Spectral', serif;
+font-weight: 600;
+
+}
+
+.champ-label span {
+display: block;
+margin-top: 2px;
+font-size: 10px;
+color: var(--text-dim);
+text-transform: uppercase;
+letter-spacing: 1.3px;
+
+}
+/* ==========================================
+NENHUM RESULTADO
+========================================== */
+
+.no-results {
+display: none;
+text-align: center;
+padding: 80px 20px;
+}
+
+.no-results.show {
+display: block;
+}
+
+.no-results > span {
+display: block;
+color: var(--gold-bright);
+font-size: 28px;
+margin-bottom: 15px;
+}
+.no-results h3 {
+font-family: 'Cinzel', serif;
+font-size: 22px;
+margin-bottom: 8px;
+}
+.no-results p {
+color: var(--text-dim);
+font-size: 14px;
+
+}
+
+/* ==========================================
+CTA
+========================================== */
+
+.champions-cta {
+position: relative;
+min-height: 420px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+background:
+    radial-gradient(
+        circle at 50% 20%,
+        rgba(10, 200, 185, .12),
+        transparent 55%
+    ),
+    linear-gradient(
+        rgba(1, 10, 19, .82),
+        rgba(1, 10, 19, .95)
+    ),
+    url("../images/mapa.jpg")
+    center / cover no-repeat;
+}
+
+.cta-content {
+position: relative;
+z-index: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 22px;
+}
+
+.cta-content h2 {
+font-size: 32px;
+}
+
+.btn-outline {
+display: inline-block;
+border: 1px solid var(--gold-1);
+color: var(--gold-2);
+font-family: 'Cinzel', serif;
+font-weight: 600;
+font-size: 14px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+padding: 14px 30px;
+border-radius: 2px;
+transition:
+    background .2s,
+    border-color .2s,
+    transform .2s;
+}
+
+.btn-outline:hover {
+background: rgba(200, 170, 110, .1);
+border-color: var(--gold-bright);
+transform: translateY(-2px);
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer {
+background: var(--bg-0);
+padding: 70px 0 30px;
+}
+.footer-grid {
+display: grid;
+grid-template-columns: 1.4fr repeat(3, 1fr);
+gap: 40px;
+margin-bottom: 50px;
+}
+
+.footer-brand .logo {
+margin-bottom: 16px;
+}
+
+.footer-brand p {
+font-size: 13px;
+color: var(--text-dim);
+max-width: 280px;
+}
+
+.footer-col h4 {
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--gold-1);
+margin-bottom: 16px;
+
+
+}
+.footer-col a {
+display: block;
+font-size: 13px;
+color: var(--text-dim);
+margin-bottom: 10px;
+transition: color .2s;
+}
+
+.footer-col a:hover {
+color: var(--gold-2);
+}
+
+.footer-bottom {
+border-top: 1px solid var(--line);
+padding-top: 24px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px;
+font-size: 12px;
+color: var(--text-dim);
+
+}
+
+/* ==========================================
+ANIMAÇÃO DOS CARDS
+========================================== */
+
+.champ-card {
+animation: championAppear .5s ease both;
+}
+
+.champ-card:nth-child(1) {
+animation-delay: .05s;
+}
+
+.champ-card:nth-child(2) {
+animation-delay: .10s;
+}
+
+.champ-card:nth-child(3) {
+animation-delay: .15s;
+}
+
+.champ-card:nth-child(4) {
+animation-delay: .20s;
+}
+
+.champ-card:nth-child(5) {
+animation-delay: .25s;
+}
+
+.champ-card:nth-child(6) {
+animation-delay: .30s;
+}
+
+.champ-card:nth-child(7) {
+animation-delay: .35s;
+}
+
+.champ-card:nth-child(8) {
+animation-delay: .40s;
+}
+
+@keyframes championAppear {
+
+from {
+    opacity: 0;
+    transform: translateY(18px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* ==========================================
+RESPONSIVO — TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+.logo {
+    margin-left: 0;
+}
+
+.nav-links {
+    gap: 18px;
+}
+
+.champ-grid {
+    grid-template-columns:repeat(3, 1fr);
+}
+
+.footer-grid {
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+/* ==========================================
+RESPONSIVO — MOBILE
+========================================== */
+
+@media (max-width: 760px) {
+
+.nav-inner {
+    padding: 12px 20px;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 14px;
+}
+
+.logo svg {
+    width: 23px;
+    height: 23px;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    flex-direction: column;
+    gap: 18px;
+    background: rgba(1, 10, 19, .98);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-cta,
+.nav-icon,
+.nav-user,
+.nav-language,
+.nav-notification {
+    display: none;
+}
+
+.nav-toggle {
+    display: block;
+
+    margin-left: auto;
+}
+
+.champions-hero {
+    min-height: 470px;
+}
+
+.hero-content {
+    padding:
+        120px 22px
+        70px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content p:last-child {
+    font-size: 15px;
+}
+
+.wrap {
+    padding: 0 20px;
+}
+
+.champions-section {
+    padding: 75px 0 85px;
+}
+
+.section-head h2 {
+    font-size: 27px;
+}
+
+.champ-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.champ-label {
+    padding:
+        40px 12px 12px;
+}
+
+.champ-label b {
+    font-size: 15px;
+}
+
+.role-row {
+    gap: 8px;
+}
+
+.role-pill {
+    padding: 9px 13px;
+
+    font-size: 10px;
+}
+
+.champions-cta {
+    min-height: 350px;
+}
+
+.cta-content h2 {
+    font-size: 25px;
+}
+
+.footer-grid {
+    grid-template-columns:1fr 1fr;
+    gap: 30px;
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+}
+
+/* ==========================================
+RESPONSIVO — TELAS PEQUENAS
+========================================== */
+
+@media (max-width: 480px) {
+
+.logo {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.champ-grid {
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+}
+
+.champ-label b {
+    font-size: 14px;
+}
+
+.champ-label span {
+    font-size: 8px;
+}
+
+.search-box input {
+    height: 44px;
+}
+
+.role-pill {
+    padding: 8px 11px;
+}
+
+.footer-grid {
+    grid-template-columns:
+        1fr;
+}
+
+.footer-brand {
+    grid-column: auto;
+}
+
+.footer-bottom {
+    flex-direction: column;
+}
+}

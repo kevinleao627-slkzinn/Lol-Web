@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campeões — Legends of the Rift</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="campeoes.css">
+</head>
+
+<body>
+
+<!-- ==========================================
+     NAVBAR
+=========================================== -->
+
+<header class="nav">
+    <div class="nav-inner">
+        <a href="../index.html" class="logo">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3.5L6 20l1.5-6.5L3 9l6-1z"
+                    stroke="#f0c33d"
+                    stroke-width="1.4"
+                    stroke-linejoin="round"
+                />
+            </svg>
+            LEGENDS OF THE RIFT
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html#noticias">
+                Notícias
+            </a>
+            <a href="campeoes.html" class="active">
+                Campeões
+            </a>
+            <a href="../index.html#skins">
+                Skins
+            </a>
+            <a href="../index.html#modos">
+                Modos
+            </a>
+
+        </nav>
+        <a href="#" class="nav-cta">
+            Jogar grátis
+        </a>
+
+        <!-- PESQUISA -->
+        <a href="#" class="nav-icon" aria-label="Pesquisar">
+            <svg viewBox="0 0 24 24" fill="none">
+
+                <circle
+                    cx="11"
+                    cy="11"
+                    r="6.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+
+                <path
+                    d="M16 16L21 21"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </a>
+
+        <!-- PERFIL -->
+        <a
+            href="../perfil/perfil.html"
+            class="nav-user"
+            aria-label="Perfil"
+        >
+            <svg viewBox="0 0 24 24" fill="none">
+
+                <circle
+                    cx="12"
+                    cy="8"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+
+                <path
+                    d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </a>
+
+        <!-- IDIOMA -->
+        <a href="#" class="nav-language" aria-label="Idioma">
+            <svg viewBox="0 0 24 24" fill="none">
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+
+                <path
+                    d="M3 12h18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+
+                <path
+                    d="M12 3c2.2 2.4 3.4 5.4 3.4 9s-1.2 6.6-3.4 9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+
+                <path
+                    d="M12 3c-2.2 2.4-3.4 5.4-3.4 9s1.2 6.6 3.4 9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </a>
+
+        <!-- NOTIFICAÇÕES -->
+        <a
+            href="#"
+            class="nav-notification"
+            aria-label="Notificações"
+        >
+
+            <svg viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                />
+
+                <path
+                    d="M10 21h4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </a>
+
+        <!-- MENU MOBILE -->
+        <button
+            class="nav-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- ==========================================
+     HERO CAMPEÕES
+=========================================== -->
+
+<main>
+    <section class="champions-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="eyebrow">
+                CONHEÇA OS CAMPEÕES
+            </p>
+            <h1>
+                CAMPEÕES
+            </h1>
+            <p>
+                Escolha seu campeão, domine seu estilo de jogo
+                e encontre seu lugar na Fenda.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CAMPEÕES
+    =========================================== -->
+
+    <section class="champions-section">
+        <div class="wrap">
+            <div class="section-head section-head--center">
+                <p class="eyebrow">
+                    ESCOLHA SEU ESTILO
+                </p>
+                <h2>
+                    Encontre seu campeão
+                </h2>
+                <p class="section-sub">
+                    De assassinos velozes a tanques resistentes,
+                    existe um campeão para cada maneira de jogar.
+                </p>
+            </div>
+
+            <!-- ==================================
+                 PESQUISA
+            =================================== -->
+
+            <div class="champion-search">
+                <div class="search-box">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="6.5"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+
+                        <path
+                            d="M16 16L21 21"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+
+                    <input
+                        type="text"
+                        id="championSearch"
+                        placeholder="Pesquisar campeão..."
+                        autocomplete="off"
+                    >
+                </div>
+            </div>
+
+            <!-- ==================================
+                 FILTROS
+            =================================== -->
+
+            <div class="role-row">
+                <button
+                    class="role-pill active"
+                    data-role="todos"
+                >
+                    <span class="role-icon">✦</span>
+                    Todos
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="assassina"
+                >
+                    <span class="role-icon">⚔</span>
+                    Assassinos
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="lutador"
+                >
+                    <span class="role-icon">⚔</span>
+                    Lutadores
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="mago"
+                >
+                    <span class="role-icon">✦</span>
+                    Magos
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="atirador"
+                >
+                    <span class="role-icon">➶</span>
+                    Atiradores
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="suporte"
+                >
+                    <span class="role-icon">✚</span>
+                    Suportes
+                </button>
+
+                <button
+                    class="role-pill"
+                    data-role="tanque"
+                >
+                    <span class="role-icon">⛨</span>
+                    Tanques
+                </button>
+            </div>
+
+            <!-- ==================================
+                 GRID DE CAMPEÕES
+            =================================== -->
+
+            <div class="champ-grid">
+
+                <!-- LUCIAN -->
+                <article
+                    class="champ-card"
+                    data-name="lucian"
+                    data-role="atirador"
+                >
+
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Lucian.jpg"
+                            alt="Lucian"
+                        >
+                    </div>
+
+                    <div class="champ-label">
+                        <b>Lucian</b>
+                        <span>Atirador</span>
+                    </div>
+                </article>
+
+                <!-- VIKTOR -->
+                <article
+                    class="champ-card"
+                    data-name="viktor"
+                    data-role="mago"
+                >
+
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Viktor.jpg"
+                            alt="Viktor">
+                    </div>
+                    <div class="champ-label">
+                        <b>Viktor</b>
+                        <span>Mago</span>
+                    </div>
+                </article>
+
+                <!-- LEE SIN -->
+                <article
+                    class="champ-card"
+                    data-name="lee sin"
+                    data-role="lutador"
+                >
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Lee_Sin.jpg"
+                            alt="Lee Sin">
+                    </div>
+                    <div class="champ-label">
+                        <b>Lee Sin</b>
+                        <span>Lutador</span>
+                    </div>
+                </article>
+
+                <!-- SERAPHINE -->
+                <article
+                    class="champ-card"
+                    data-name="seraphine"
+                    data-role="suporte">
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Seraphine.jpg"
+                            alt="Seraphine">
+                    </div>
+                    <div class="champ-label">
+                        <b>Seraphine</b>
+                        <span>Suporte</span>
+                    </div>
+                </article>
+
+                <!-- AKALI -->
+                <article
+                    class="champ-card"
+                    data-name="akali"
+                    data-role="assassina">
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Akali.jpg"
+                            alt="Akali">
+                    </div>
+                    <div class="champ-label">
+                        <b>Akali</b>
+                        <span>Assassina</span>
+                    </div>
+                </article>
+
+                <!-- ORNN -->
+                <article
+                    class="champ-card"
+                    data-name="ornn"
+                    data-role="tanque"
+                >
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Ornn.jpg"
+                            alt="Ornn">
+                    </div>
+                    <div class="champ-label">
+                        <b>Ornn</b>
+                        <span>Tanque</span>
+                    </div>
+                </article>
+
+                <!-- CAMPEÃO EXTRA -->
+                <article
+                    class="champ-card"
+                    data-name="kindred"
+                    data-role="atirador"
+                >
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Kindred.jpg"
+                            alt="Kindred"
+                        >
+                    </div>
+                    <div class="champ-label">
+                        <b>Kindred</b>
+                        <span>Atirador</span>
+                    </div>
+                </article>
+
+                <!-- JHIN -->
+                <article
+                    class="champ-card"
+                    data-name="jhin"
+                    data-role="atirador"
+                >
+                    <div class="champ-portrait">
+                        <img
+                            src="../images/Jhin.jpg"
+                            alt="Jhin"
+                        >
+                    </div>
+                    <div class="champ-label">
+                        <b>Jhin</b>
+                        <span>Atirador</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- RESULTADO VAZIO -->
+            <div
+                class="no-results"
+                id="noResults"
+            >
+                <span>✦</span>
+                <h3>
+                    Nenhum campeão encontrado
+                </h3>
+                <p>
+                    Tente pesquisar outro nome ou selecionar
+                    outra função.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CTA
+    =========================================== -->
+
+    <section class="champions-cta">
+        <div class="wrap">
+            <div class="cta-content">
+                <p class="eyebrow">
+                    ENCONTRE SEU ESTILO
+                </p>
+                <h2>
+                    Qual será sua próxima lenda?
+                </h2>
+                <a
+                    href="../index.html"
+                    class="btn-outline"
+                >
+                    Voltar para o início
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer>
+    <div class="wrap">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a
+                    href="../index.html"
+                    class="logo"
+                >
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3.5L6 20l1.5-6.5L3 9l6-1z"
+                            stroke="#f0c33d"
+                            stroke-width="1.4"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    LEGENDS OF THE RIFT
+                </a>
+                <p>
+                    Projeto acadêmico, inspirado no layout
+                    do site oficial de League of Legends.
+                    Não possui vínculo com a Riot Games.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>
+                    Jogo
+                </h4>
+                <a href="../index.html#noticias">
+                    Notícias
+                </a>
+                <a href="campeoes.html">
+                    Campeões
+                </a>
+                <a href="../index.html#modos">
+                    Modos de jogo
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h4>
+                    Comunidade
+                </h4>
+                <a href="#">
+                    Fóruns
+                </a>
+                <a href="#">
+                    Criadores
+                </a>
+                <a href="#">
+                    Suporte
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h4>
+                    Legal
+                </h4>
+                <a href="#">
+                    Termos de uso
+                </a>
+                <a href="#">
+                    Privacidade
+                </a>
+                <a href="#">
+                    Cookies
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 Legends of the Rift — Projeto Web.
+            </span>
+            <span>
+                Desenvolvido por Kevin Leão.
+            </span>
+        </div>
+    </div>
+</footer>
+<script src="campeoes.js"></script>
+</body>
+</html>
